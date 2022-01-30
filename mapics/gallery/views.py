@@ -4,5 +4,13 @@ from django.http  import HttpResponse, Http404
 # import numpy as num 
 # Create your views here.
 
-def welcome(request):
-    return HttpResponse('Welcome to the Moringa Tribune')
+def gallery(request):
+    return render(request, 'gallery/gallery.html')
+  
+def viewPhoto(request, pk):
+    return render(request, 'gallery/photo.html')
+  
+  
+def addPhoto(request):
+    return render(request, 'gallery/add.html')
+  
