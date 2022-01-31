@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect 
 # from .models import Location,Category,Images
 from django.http  import HttpResponse, Http404
+from .models import Category, Photo
 # import numpy as num 
 # Create your views here.
 
 def gallery(request):
-    return render(request, 'gallery/gallery.html')
+    categories = Category.objects.all()
+    photos =Photo.objects.all()
+    context = { 'categories': categories, 'photos': photos}
+    return render(request, 'gallery/gallery.html', context)
   
 def viewPhoto(request, pk):
     return render(request, 'gallery/photo.html')
