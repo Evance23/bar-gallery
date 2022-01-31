@@ -11,7 +11,7 @@ class Category(models.Model):
     
     
 class Photo(models.Model):
-    category = models.ForeignKey(Category, on_delete= models.Set_Null)
+    category = models.ForeignKey(Category, on_delete= models.Set_Null, null=True)
     image = models.ImageField(null=False, blank=False)
     description = models.CharField(max_length=100, null= False, blank = False)
     
