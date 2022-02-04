@@ -21,11 +21,11 @@ def addPhoto(request):
     categories = Category.objects.all()
     
     
-if request.method = 'POST' :
+    if request.method = 'POST' :
+
+        data = request.POST
+        image = request.FILES.get("image")
+        context = { 'categories': categories}
     
-    data = request.POST
-    image = request.FILES.get("image")
-    context = { 'categories': categories}
-    
-return render(request, 'gallery/add.html', context)
+    return render(request, 'gallery/add.html', context)
   
