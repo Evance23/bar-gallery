@@ -33,11 +33,13 @@ def addPhoto(request):
         else:
             category = None
         
-        photo = Photo.object.create(
-            category = category
-            description = data ['description']
-        )
+        photo = Photo.object.create (
+            category = category,
+            description = data ['description'],
+            image = image,
+         )
         
+        return redirect('gallery')
         
     context = { 'categories': categories}
     return render(request, 'gallery/add.html', context)
