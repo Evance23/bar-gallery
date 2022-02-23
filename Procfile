@@ -1,0 +1,1 @@
+web: mapics.wsgi
