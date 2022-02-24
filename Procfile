@@ -1,1 +1,1 @@
-web:mapics.wsgi
+web: gunicorn mapics.wsgi --log-file -
