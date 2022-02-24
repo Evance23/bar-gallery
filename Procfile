@@ -1,1 +1,1 @@
-web: mapics.wsgi
+web:mapics.wsgi
